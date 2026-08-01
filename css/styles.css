@@ -1,0 +1,354 @@
+/* ---------- top bar ---------- */
+/* ---------- top bar ---------- */
+/* ---------- top bar ---------- */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(14px + env(safe-area-inset-top)) 20px 14px;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+}
+
+.icon-btn:hover {
+    background: var(--elevated);
+}
+
+.icon-btn:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+/* ---------- side ---------- */
+/* ---------- side ---------- */
+/* ---------- side ---------- */
+
+.side {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 20px calc(80px + env(safe-area-inset-bottom));
+}
+
+/* ---------- profile ---------- */
+/* ---------- profile ---------- */
+/* ---------- profile ---------- */
+
+.profile {
+    padding: 10px 0 4px;
+}
+
+.profile-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.display-name {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.verified-lg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.handle-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.handle {
+    font-size: 15px;
+}
+
+.pill {
+    font-size: 12px;
+    color: var(--secondary);
+    background: var(--elevated);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 9px;
+}
+
+.avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(140deg, #4A5CFF, #B14AFF 55%, #FF4A7D);
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.avatar-sm {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.bio {
+    margin-top: 14px;
+    max-width: 480px;
+}
+
+.bio p+p {
+    margin-top: 8px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 15px;
+    margin-left: -7px;
+}
+
+.social {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    color: var(--secondary);
+    transition: color 0.15s ease, background 0.15s ease;
+}
+
+.social svg {
+    width: 21px;
+    height: 21px;
+}
+
+.social:hover {
+    color: var(--text);
+    background: var(--elevated);
+}
+
+.social:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+.dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--secondary);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 6px;
+}
+
+.btn {
+    flex: 1;
+    padding: 9px 0;
+    border-radius: 10px;
+    border: 1px solid var(--btn-border);
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.btn:hover {
+    opacity: 0.6;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+}
+
+/* ---------- tabs ---------- */
+/* ---------- tabs ---------- */
+/* ---------- tabs ---------- */
+
+.tabs {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-top: 14px;
+}
+
+.tab {
+    flex: 1;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--secondary);
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+    color: var(--text);
+}
+
+.tab:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: -4px;
+}
+
+.tab-underline {
+    position: absolute;
+    bottom: -1px;
+    height: 1.5px;
+    background: var(--text);
+    transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        top 0.25s cubic-bezier(0.4, 0, 0.2, 1), height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- pinned about thread ---------- */
+/* ---------- pinned about thread ---------- */
+/* ---------- pinned about thread ---------- */
+
+.pinned-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 16px 0 2px 48px;
+}
+
+.pinned-label svg {
+    width: 13px;
+    height: 13px;
+}
+
+/* ---------- cards ---------- */
+.card {
+    display: block;
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    border-color: var(--secondary);
+}
+
+.card-visual {
+    height: 170px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.card-meta {
+    padding: 10px 12px;
+    background: var(--elevated);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-sub {
+    color: var(--secondary);
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* ---------- cards ---------- */
+/* ---------- cards ---------- */
+/* ---------- cards ---------- */
+
+.card {
+    display: block;
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    border-color: var(--secondary);
+}
+
+.card-visual {
+    height: 170px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.card-meta {
+    padding: 10px 12px;
+    background: var(--elevated);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-sub {
+    color: var(--secondary);
+    font-size: 13px;
+    margin-top: 2px;
+}
