@@ -97,21 +97,194 @@
             </section>
             <!-- this is the tabs navigation section that appears below the profile -->
             <nav class="tabs" role="tablist" aria-label="Portfolio tabs">
-            <button class="tab" role="tab" id="tab-home" aria-controls="panel-home" aria-selected="true">Home</button>
-            <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="false">About</button>
-            <button class="tab" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false">Education</button>
-            <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="false">Projects</button>
-            <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false">Contact</button>
+                <button class="tab" role="tab" id="tab-home" aria-controls="panel-home"
+                    aria-selected="true">Home</button>
+                <button class="tab" role="tab" id="tab-about" aria-controls="panel-about"
+                    aria-selected="false">About</button>
+                <button class="tab" role="tab" id="tab-education" aria-controls="panel-education"
+                    aria-selected="false">Education</button>
+                <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects"
+                    aria-selected="false">Projects</button>
+                <button class="tab" role="tab" id="tab-contact" aria-controls="panel-contact"
+                    aria-selected="false">Contact</button>
             </nav>
         </aside>
         <!-- this is the home tab of the webpage
          this is where you will see: 
             a pinned post at the top
-            other posts below it-->
+            other posts below it -->
         <div class="main-content" role="tabpanel" id="panel-home" aria-labelledby="tab-home">
-            
+            <!-- this is the pinned post section that appears at the top of the home tab -->
+            <div class="pinned-post-label">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M14.5 2l7.5 7.5-2 2-1.6-.5-3.6 3.6.4 3.3-1.7 1.7-4.2-4.2L4 21l-1-1 5.6-5.3-4.2-4.2 1.7-1.7 3.3.4L14 5.6l-.5-1.6z" />
+                </svg>
+                Pinned Post
+            </div>
+            <div id="pinned-post"></div>
+            <div id="blog-feed"></div>
+        </div>
+        <!-- this is the about tab of the webpage 
+                this page shows:
+                    a short about section
+                    skills
+                    my experience-->
+        <div class="main-content" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+            <section class="sec">
+                <h2 class="sec-title">About Me</h2>
+                <div class="about-me-sec">
+                    <p>
+                        I'm a software engineer with a passion for building web applications and open source projects. I
+                        have experience in full-stack development, working with technologies like JavaScript, React,
+                        Node.js, and Python. I enjoy collaborating with teams to create innovative solutions that make a
+                        positive impact on users.
+                    </p>
+                </div>
+            </section>
+            <section class="sec">
+                <h2 class="sec-title">Skills</h2>
+                <div class="skills-sec">
+                    <h4>Frontend</h4>
+                    <div class="chips">
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Vue.js</span>
+                    </div>
+                </div>
+                <div class="skills-sec">
+                    <h4>Backend</h4>
+                    <div class="chips">
+                        <span class="chip">Node.js</span>
+                        <span class="chip">Express</span>
+                        <span class="chip">Python</span>
+                        <span class="chip">Django</span>
+                        <span class="chip">SQL</span>
+                    </div>
+                </div>
+                <div class="skills-sec">
+                    <h4>AI / ML</h4>
+                    <div class="chips">
+                        <span class="chip">Python</span>
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">PyTorch</span>
+                        <span class="chip">scikit-learn</span>
+                        <span class="chip">Pandas</span>
+                    </div>
+                </div>
+            </section>
+            <section class="sec">
+                <h2 class="sec-title">Experience</h2>
+                <div class="experience-entry">
+                    <div class="role-date">
+                        <span class="entry-role">Senior Software Engineer</span>
+                        <span class="entry-date">Jan 2020 - Present</span>
+                    </div>
+                    <p class="entry-description">
+                        Led a team of developers in building scalable web applications using modern technologies.
+                    </p>
+                </div>
+                <div class="experience-entry">
+                    <div class="role-date">
+                        <span class="entry-role">Senior Software Engineer</span>
+                        <span class="entry-date">Jan 2020 - Present</span>
+                    </div>
+                    <p class="entry-description">
+                        Led a team of developers in building scalable web applications using modern technologies.
+                    </p>
+                </div>
+                <div class="experience-entry">
+                    <div class="role-date">
+                        <span class="entry-role">Senior Software Engineer</span>
+                        <span class="entry-date">Jan 2020 - Present</span>
+                    </div>
+                    <p class="entry-description">
+                        Led a team of developers in building scalable web applications using modern technologies.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <!-- this is the education tab of the webpage
+                this page shows:
+                    my education history
+                    relevant coursework 
+                    certifications -->
+        <div class="main-content" role="tabpanel" id="panel-education" aria-labelledby="tab-education">
+            <section class="sec">
+                <h2 class="sec-title">Education</h2>
+                <div class="education-entry">
+                    <div class="level-date-school-location">
+                        <span class="entry-level">Bachelor of Science in Computer Science</span>
+                        <span class="entry-date">2015 - 2019</span>
+                        <span class="entry-school">University Name</span>
+                        <span class="entry-location">City, State</span>
+                    </div>
+                    <div class="level-date-school-location">
+                        <span class="entry-level">Bachelor of Science in Computer Science</span>
+                        <span class="entry-date">2015 - 2019</span>
+                        <span class="entry-school">University Name</span>
+                        <span class="entry-location">City, State</span>
+                    </div>
+                </div>
+            </section>
+            <section class="sec">
+                <h2 class="sec-title">Relevant Courses</h2>
+                <div class="course-list">
+                    <h4>MSc, Data Science</h4>
+                    <div class="chips">
+                        <span class="chip">Machine Learning</span>
+                        <span class="chip">Deep Learning</span>
+                        <span class="chip">Natural Language Processing</span>
+                        <span class="chip">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="course-list">
+                    <h4>BSc, Data Science</h4>
+                    <div class="chips">
+                        <span class="chip">Machine Learning</span>
+                        <span class="chip">Deep Learning</span>
+                        <span class="chip">Natural Language Processing</span>
+                        <span class="chip">Computer Vision</span>
+                    </div>
+                </div>
+            </section>
+            <section class="sec">
+                <h2 class="sec-title">Certifications</h2>
+                <div class="chips">
+                    <span class="chip">Certified Kubernetes Administrator</span>
+                    <span class="chip">AWS Certified Solutions Architect</span>
+                    <span class="chip">Google Cloud Professional Data Engineer</span>
+                </div>
+            </section>
+        </div>
+        <!-- this is the projects tab of the webpage
+                this page shows:
+                    my projects -->
+        <div class="panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden></div>
+        <!-- this is the contact tab of the webpage
+                this page shows:
+                    email
+                    instagram
+                    github
+                    linkedin -->
+        <div class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+            <ul class="contact-list">
+                <li><a href="mailto:hello@maraokonjo.com"><span>Email</span><span
+                            class="contact-value">hello@natewright.com <span class="arrow">→</span></span></a></li>
+                <li><a href="#"><span>Instagram</span><span class="contact-value">@natewright <span
+                                class="arrow">→</span></span></a></li>
+                <li><a href="#"><span>GitHub</span><span class="contact-value">/natewright <span
+                                class="arrow">→</span></span></a></li>
+                <li><a href="#"><span>LinkedIn</span><span class="contact-value">/in/natewright <span
+                                class="arrow">→</span></span></a></li>
+            </ul>
         </div>
     </main>
+    <!-- this is what shows when you open up a post (thread) -->
+    <section id="detail" hidden role="dialog" aria-modal="true" aria-label="Thread"></section>
+
 </body>
 
 </html>
